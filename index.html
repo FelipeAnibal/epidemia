@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<title>Virus Simulator</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<!-- P5.js Script -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+	<!-- Bootstrap Stylesheet -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<!-- My Stylesheet -->
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="navbar0 row justify-content-center">
+			<nav class="col-md-9 mt-4">
+				<p><a href="../projects">Projects</a> / Vírus </p>
+			</nav>
+		</div>
+		<div class="row justify-content-center main-section align-items-center">
+			<div class="col-8 jumbotron">
+				<h1 class="main-title">Simulando uma Epidemia</h1>
+				<p class="text-center mt-3 lead">Bem vindo ao Simulando uma epidemia! Esse projeto é uma tentativa de demonstrar visualmente o desenvolvimimento de uma epidemia. Porém, é importante notar que essa é somente uma ferramenta didática, o objetivo desse projeto não é demonstrar com precisão uma epidemia, mas reforçar a importância do distanciamento e de outras medidas preventivas.</p>
+				<div class="mx-auto mt-4 text-center">
+					<a href="#virusCanvas-container">
+						<button type="button" name="button" class="btn btn-primary mt-3 btn-lg"
+							onclick="startPopulation()">Recomeçar</button>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mb-5 justify-content-center">
+			<div class="col-md-8 p-3">
+				<div id="virusCanvas-container" class="mt-3"></div>
+			</div>
+			<div class="col-md-4 control p-3">
+				<h2>Controles:</h2>
+				<div class="controles row">
+					<p>Número total de pessoas: <span id='population-count'></span> <input class="slider"
+							type="range" min="2" max='300' id="numOfPeople" onchange="startPopulation()" value="200">
+					</p>
+					<p>Número inicial de pessoas infectadas: <span id='initial-infected'></span> <input class="slider"
+							type="range" min='1' id="initNumOfInfected" value="1" onchange="startPopulation()"></p>
+					<p>Número de pessoas em quarentena: <span id='quarentined-count'></span> <input class="slider"
+							type="range" min='0' id="numOfQuarentined" value="0" onchange="updateVariables()"></p>
+				</div>
+				<div class="indicadores row">
+					<h2 class="col-12">Indicadores:</h2>
+					<p class="col-7">Número de infectados: <span id='infected-count'></span></p>
+					<p class="col-5">Diminuir resolução <input id="lowerQuality-check" type="checkbox"
+							onchange="startPopulation()" checked></p>
+					<!-- <p>Recuperados: <span id='immune-count'></span> </p> -->
+				</div>
+				<div class="graph">
+					<div id="graphCanvas-container">
+						<canvas id="graphCanvas"></canvas>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- My Script -->
+	<script type="text/javascript" src="js/virusScript.js"></script>
+	<!-- Bootstrap Script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<!-- Charts.js Script -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<!-- My Script -->
+	<script type="text/javascript" src="js/graphScript.js"></script>
+</body>
+
+</html>

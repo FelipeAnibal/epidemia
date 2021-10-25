@@ -1,0 +1,88 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Palette
+    color:#10163a;
+    color:#252c4a;
+    color:#5e57c3;
+    color:#1cd7cc;
+    color:#ff9f43;
+    color:#ea5455;
+    color:#28c76f;
+    color:#5eaea2;
+*/
+
+body{
+  font-family: 'raleway', sans-serif;
+  font-weight: 500;
+  color:white;
+  background-color: #252c4a;
+}
+
+h1{
+  text-align: center;
+  font-weight: 700;
+}
+
+#infected-count{
+  margin: 5px;
+  font-family: sans-serif;
+}
+
+
+.slider{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #10163a;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00d9ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+canvas{
+  border: 2px solid lightgray;
+}
+
+.main-section{
+  min-height:600px;
+  /* font-size:1rem; */
+}
+
+.main-title{
+  font-size:2.5rem;
+}
+
+.navbar0 p{
+  color:#ffffffee;
+  font-weight: 600;
+}
+
+.navbar0 a{
+  color:#ffffffee;
+  text-decoration: solid underline #ffffffee 2px;
+}
+
+.btn{
+  font-family: sans-serif;
+}
